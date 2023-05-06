@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.disneyWorld</groupId>
-    <artifactId>simple-registration</artifactId>
+    <artifactId>disney-universe</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <main.class.name>org.disneyWorld.sre.Main</main.class.name>
-        <final.jar.name>simple-registration</final.jar.name>
+        <final.jar.name>disney-universe</final.jar.name>
     </properties>
 
     <dependencies>
