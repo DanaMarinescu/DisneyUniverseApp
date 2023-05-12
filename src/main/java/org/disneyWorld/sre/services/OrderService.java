@@ -2,14 +2,9 @@ package org.disneyWorld.sre.services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.dizitart.no2.IndexType;
 import org.dizitart.no2.Nitrite;
-import org.dizitart.no2.objects.Index;
-import org.dizitart.no2.objects.Indices;
-import org.dizitart.no2.objects.ObjectFilter;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.dizitart.no2.objects.filters.ObjectFilters;
-import org.disneyWorld.sre.model.DisneyCharacter;
 import org.disneyWorld.sre.model.Order;
 
 import static org.disneyWorld.sre.services.FileSystemService.getPathToFile;
@@ -32,7 +27,7 @@ public class OrderService {
             return orderRepository.isClosed();
         else return true;
     }
-    public static void addOrder(String username,DisneyCharacter characterOrdered, String status) {
+    public static void addOrder(String username, Character characterOrdered, String status) {
         characterOrdered.setStock(characterOrdered.getStock()-1);
         orderRepository.insert(new Order(characterOrdered.getName(),characterOrdered.getAge(),characterOrdered.getPrice(),status,characterOrdered.getStock(),username));
     }
