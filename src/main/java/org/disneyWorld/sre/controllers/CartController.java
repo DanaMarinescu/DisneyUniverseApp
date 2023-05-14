@@ -67,7 +67,7 @@ public class CartController implements Initializable {
         id_age.setCellValueFactory(new PropertyValueFactory<>("age"));
         id_price.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        table.getItems().add(DisneyCharactersController.getSelect());
+        table.getItems().add(DisneyCharacterController.getSelect());
     }
 }
 
