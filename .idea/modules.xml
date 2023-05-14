@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/disney-universe.iml" filepath="$PROJECT_DIR$/disney-universe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-registration.iml" filepath="$PROJECT_DIR$/simple-registration.iml" />
     </modules>
   </component>
 </project>

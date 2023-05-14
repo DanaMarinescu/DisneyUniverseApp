@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1ca6e5-a940-410c-931e-5338b270670f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/disneyWorld/sre/controllers/ClassicDisneyCharactersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/disneyWorld/sre/controllers/ClientHomePageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/disneyWorld/sre/controllers/DisneyPrincessesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/disneyWorld/sre/controllers/TheHobbitCharactersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ClassicDisneyCharacters.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ClientHomePage.xml.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DisneyPrincesses.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/TheHobbitCharacters.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -62,7 +56,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/JavaFX/openjfx-17.0.7_windows-x64_bin-sdk/javafx-sdk-17.0.7/lib",
+    "last_opened_file_path": "C:/Users/Alexia/Desktop/DisneyUniverseApp",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="492.0" prefWidth="600.0" style="-fx-background-color: lightblue; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.CartController">
+   <children>
+      <TableView layoutX="31.0" layoutY="116.0" prefHeight="310.0" prefWidth="538.0" style="-fx-background-color: white; -fx-border-color: dark blue;">
+        <columns>
+          <TableColumn prefWidth="213.5999755859375" style="-fx-background-color: #00BFFF;" text="characterName" />
+          <TableColumn prefWidth="162.4000244140625" style="-fx-background-color: #00BFFF;" text="characterAge" />
+            <TableColumn prefWidth="167.20001220703125" style="-fx-background-color: #00BFFF;" text="price" />
+        </columns>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.18432748317718506" green="0.1497076004743576" blue="0.8421052694320679" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Label layoutX="445.0" layoutY="32.0" prefHeight="58.0" prefWidth="125.0" text="Cart">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="30.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.2985876798629761" green="0.22619999945163727" blue="0.7799999713897705" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Label>
+      <Button layoutX="493.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Order" textFill="#78d3ec">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.5666666626930237" green="0.8627777695655823" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="34.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Disney.jpeg" />
+         </image>
+      </ImageView>
+      <Button layoutX="26.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Back" textFill="#78d3ec">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.5666666626930237" green="0.8627777695655823" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
