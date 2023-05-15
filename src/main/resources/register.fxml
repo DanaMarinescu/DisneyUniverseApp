@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="390.0" prefWidth="600" style="-fx-background-color: #E6E6FA;" vgap="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.RegistrationController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <Text id="title-text" text="Register to your Disney Universe!" wrappingWidth="270.391845703125" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+      <font>
+         <Font name="Gabriola" size="26.0" />
+      </font>
+      <fill>
+         <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.5684210658073425" green="0.22357894480228424" blue="0.18526315689086914" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.4150877296924591" green="0.5960233807563782" blue="0.9578947424888611" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill></Text>
+
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <font>
+         <Font name="Lucida Bright Demibold" size="12.0" />
+      </font>
+      <textFill>
+         <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.5684210658073425" green="0.22357894480228424" blue="0.18526315689086914" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.4150877296924591" green="0.5960233807563782" blue="0.9578947424888611" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill></Label>
+
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <effect>
+         <ColorAdjust brightness="-0.13" contrast="0.26" hue="-0.39" saturation="0.11" />
+      </effect></TextField>
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <textFill>
+         <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.5684210658073425" green="0.22357894480228424" blue="0.18526315689086914" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.4150877296924591" green="0.5960233807563782" blue="0.9578947424888611" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill>
+      <font>
+         <Font name="Lucida Bright Demibold" size="12.0" />
+      </font></Label>
+
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <effect>
+         <ColorAdjust brightness="0.34" contrast="-0.13" hue="0.07" saturation="0.21">
+            <input>
+               <ColorAdjust brightness="-0.02" contrast="-0.02" hue="0.39" saturation="0.11" />
+            </input>
+         </ColorAdjust>
+      </effect></PasswordField>
+
+    <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <textFill>
+         <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.5684210658073425" green="0.22357894480228424" blue="0.18526315689086914" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.4150877296924591" green="0.5960233807563782" blue="0.9578947424888611" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill>
+      <font>
+         <Font name="Lucida Bright Demibold" size="12.0" />
+      </font></Label>
+
+    <ChoiceBox fx:id="role" opacity="0.59" prefHeight="26.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <effect>
+         <ColorAdjust brightness="-0.21" contrast="0.15" hue="0.28" saturation="-0.56" />
+      </effect></ChoiceBox>
+
+    <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+      <children>
+           <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" onAction="#handleRegisterAction" prefHeight="23.0" prefWidth="68.0" text="Register">
+            <font>
+               <Font name="Lucida Bright Demibold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+    </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
