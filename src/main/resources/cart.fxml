@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="492.0" prefWidth="600.0" style="-fx-background-color: lightblue; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.CartController">
     <children>
         <TableView layoutX="31.0" layoutY="116.0" prefHeight="310.0" prefWidth="538.0" style="-fx-background-color: white; -fx-border-color: dark blue;">
@@ -40,7 +39,7 @@
                 </InnerShadow>
             </effect>
         </Label>
-        <Button layoutX="493.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Order" textFill="#78d3ec">
+        <Button layoutX="493.0" layoutY="441.0" mnemonicParsing="false" onAction="#toOrder" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Order" textFill="#78d3ec">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="16.0" />
             </font>
@@ -57,7 +56,7 @@
                 <Image url="@../../../../Disney.jpeg" />
             </image>
         </ImageView>
-        <Button layoutX="26.0" layoutY="441.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Back" textFill="#78d3ec">
+        <Button layoutX="26.0" layoutY="441.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Back" textFill="#78d3ec">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="16.0" />
             </font>

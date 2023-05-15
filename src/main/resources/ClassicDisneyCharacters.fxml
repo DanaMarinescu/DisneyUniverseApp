@@ -14,7 +14,7 @@
     <children>
         <AnchorPane prefHeight="440.0" prefWidth="641.0" style="-fx-background-color: #a7dbd8;">
             <children>
-                <Button fx:id="cartButton" layoutX="87.0" layoutY="230.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Cart">
+                <Button fx:id="cartButton" layoutX="87.0" layoutY="230.0" mnemonicParsing="false" onAction="#toCart" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Cart">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -45,7 +45,7 @@
                         <Font name="Gabriola" size="28.0" />
                     </font>
                 </Text>
-                <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Back">
+                <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Back">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -97,7 +97,7 @@
                         </LinearGradient>
                     </fill>
                 </Text>
-                <Button fx:id="addButton" layoutX="87.0" layoutY="173.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Add">
+                <Button fx:id="addButton" layoutX="87.0" layoutY="173.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Add">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>

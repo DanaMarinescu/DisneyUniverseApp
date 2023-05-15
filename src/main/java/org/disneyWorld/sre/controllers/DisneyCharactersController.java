@@ -39,7 +39,7 @@ public class DisneyCharactersController implements Initializable {
     @FXML
     private TableColumn<DisneyCharacter, Float> id_price;
 
-    void toCart(javafx.event.ActionEvent actionEvent) throws IOException, StockUnavailable {
+    public void addToCart(javafx.event.ActionEvent actionEvent) throws IOException, StockUnavailable {
         select=charactersTable.getSelectionModel().getSelectedItem();
         try{
             DisneyCharacterService.checkStock(select.getStock());
@@ -53,8 +53,16 @@ public class DisneyCharactersController implements Initializable {
         }
     }
 
-    void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientHomePage.fxml"));
+        window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
+    }
+
+    public void toCart(javafx.event.ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
         window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);

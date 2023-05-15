@@ -38,7 +38,7 @@ public class ClientHomePageController {
     }
     @FXML
     public void handlePastOrders(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("PastOrders.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPastOrders.fxml"));
         window= (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);
@@ -46,7 +46,7 @@ public class ClientHomePageController {
     }
     @FXML
     public void handleCart(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Cart.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
         window= (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         window.setScene(scene);
