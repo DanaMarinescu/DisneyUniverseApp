@@ -13,7 +13,7 @@
     <children>
         <AnchorPane prefHeight="410.0" prefWidth="610.0" style="-fx-background-color: #ffdaab;">
             <children>
-                <Button fx:id="pastOrders" layoutX="128.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Past Orders">
+                <Button fx:id="pastOrders" layoutX="128.0" layoutY="360.0" mnemonicParsing="false" onAction="#handlePastOrders" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Past Orders">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -44,7 +44,7 @@
                         <Font name="Gabriola" size="35.0" />
                     </font>
                 </Text>
-                <Button fx:id="logOut" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Log Out">
+                <Button fx:id="logOut" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Log Out">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -70,7 +70,7 @@
                         </LinearGradient>
                     </textFill>
                 </Button>
-                <Button fx:id="disneyPrincesses" layoutX="21.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Disney Princesses">
+                <Button fx:id="disneyPrincesses" layoutX="21.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleDisneyPrincesses" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Disney Princesses">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -98,7 +98,7 @@
                 </Button>
                 <HBox layoutX="519.0" layoutY="-1.0" prefHeight="410.0" prefWidth="91.0" style="-fx-background-color: #ffabab;">
                     <children>
-                        <Button fx:id="cart" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-background-radius: 15;" text="Cart">
+                        <Button fx:id="cart" mnemonicParsing="false" onAction="#handleCart" prefHeight="42.0" prefWidth="86.0" style="-fx-background-radius: 15;" text="Cart">
                             <font>
                                 <Font name="Segoe UI Light" size="16.0" />
                             </font>
@@ -126,7 +126,7 @@
                         </Button>
                     </children>
                 </HBox>
-                <Button fx:id="classicDisneyCharacters" layoutX="191.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Classic Disney &#10;Characters" textAlignment="CENTER">
+                <Button fx:id="classicDisneyCharacters" layoutX="191.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleClassicDisneyCharacters" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Classic Disney &#10;Characters" textAlignment="CENTER">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -152,7 +152,7 @@
                         </LinearGradient>
                     </textFill>
                 </Button>
-                <Button fx:id="hobbitCharacters" layoutX="357.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Hobbit Characters">
+                <Button fx:id="hobbitCharacters" layoutX="357.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleHobbitCharacters" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Hobbit Characters">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>

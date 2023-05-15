@@ -32,7 +32,7 @@ public class LoginController {
         try {
             if(UserService.checkUser(usernameField.getText(), passwordField.getText()).equals("Client")){
                 currentUser=new User(usernameField.getText(),passwordField.getText(),"Client");
-                Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("HomePage.fxml"));
+                Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("clientHomePage.fxml"));
                 window=(Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
                 scene=new Scene(root);
                 window.setScene(scene);
