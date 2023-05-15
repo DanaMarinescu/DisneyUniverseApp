@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.ClientHomePageController">
+    <children>
+        <AnchorPane prefHeight="410.0" prefWidth="610.0" style="-fx-background-color: #ffdaab;">
+            <children>
+                <Button fx:id="pastOrders" layoutX="128.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Past Orders">
+                    <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4104979811574696">
+                                    <color>
+                                        <Color red="0.11622807383537292" green="0.2368421107530594" blue="0.13432016968727112" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.15438596904277802" green="0.28947368264198303" blue="0.6947368383407593" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Button>
+                <Text fill="#0d5363" layoutX="57.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore Disney Character Categories" wrappingWidth="413.39999999999986">
+                    <font>
+                        <Font name="Gabriola" size="35.0" />
+                    </font>
+                </Text>
+                <Button fx:id="logOut" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Log Out">
+                    <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4104979811574696">
+                                    <color>
+                                        <Color red="0.2923976480960846" green="0.6315789222717285" blue="0.343274861574173" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Button>
+                <Button fx:id="disneyPrincesses" layoutX="21.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Disney Princesses">
+                    <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4104979811574696">
+                                    <color>
+                                        <Color red="0.08181042969226837" green="0.22368420660495758" blue="0.10309149324893951" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.15438596904277802" green="0.28947368264198303" blue="0.6947368383407593" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Button>
+                <HBox layoutX="519.0" layoutY="-1.0" prefHeight="410.0" prefWidth="91.0" style="-fx-background-color: #ffabab;">
+                    <children>
+                        <Button fx:id="cart" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" style="-fx-background-radius: 15;" text="Cart">
+                            <font>
+                                <Font name="Segoe UI Light" size="16.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.4104979811574696">
+                                            <color>
+                                                <Color red="0.1801900565624237" green="0.3815789520740509" blue="0.21039839088916779" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.15438596904277802" green="0.28947368264198303" blue="0.6947368383407593" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Button>
+                    </children>
+                </HBox>
+                <Button fx:id="classicDisneyCharacters" layoutX="191.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Classic Disney &#10;Characters" textAlignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4104979811574696">
+                                    <color>
+                                        <Color red="0.062134504318237305" green="0.15789473056793213" blue="0.07649853825569153" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.15438596904277802" green="0.28947368264198303" blue="0.6947368383407593" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Button>
+                <Button fx:id="hobbitCharacters" layoutX="357.0" layoutY="169.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="146.0" style="-fx-background-radius: 15;" text="Hobbit Characters">
+                    <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.40378657176149646">
+                                    <color>
+                                        <Color red="0.12609648704528809" green="0.30263158679008484" blue="0.1525767594575882" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.15438596904277802" green="0.28947368264198303" blue="0.6947368383407593" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
