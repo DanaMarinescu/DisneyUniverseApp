@@ -19,48 +19,47 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class DisneyCharactersController implements Initializable
-{
-     private Stage window;
-     private Scene scene;
-     private Parent root;
-     private static DisneyCharacter select;
-     private TableView<DisneyCharacter> charactersTable;
-     @FXML
-     private Button id_cart;
-     @FXML
-     private TableColumn<DisneyCharacter, String> id_name;
-     @FXML
-     private TableColumn<DisneyCharacter, Float> id_price;
-     public void addToCart (javafx.event.ActionEvent actionEvent) throws IOException, StockUnavailable {
-         select=charactersTable.getSelectionModel().getSelectedItem();
-         try{
-             DisneyCharacterService.checkStock(select.getStock());
-             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
-             window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-             scene = new Scene(root);
-             window.setScene(scene);
-             window.show();
-
-        }  catch (StockUnavailable e) {
-             e.printStackTrace();
-        }
+  public class DisneyCharactersController implements Initializable
+ {
+      private Stage window;
+      private Scene scene;
+      private Parent root;
+      private static DisneyCharacter select;
+      private TableView<DisneyCharacter> charactersTable;
+      @FXML
+      private Button id_cart;
+      @FXML
+      private TableColumn<DisneyCharacter, String> id_name;
+      @FXML
+      private TableColumn<DisneyCharacter, Float> id_price;
+      public void addToCart (javafx.event.ActionEvent actionEvent) throws IOException, StockUnavailable {
+          select=charactersTable.getSelectionModel().getSelectedItem();
+          try{
+              DisneyCharacterService.checkStock(select.getStock());
+              Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
+              window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+              scene = new Scene(root);
+              window.setScene(scene);
+              window.show();
+         }  catch (StockUnavailable e) {
+              e.printStackTrace();
+         }
     }
-     public void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
+      public void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
 
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientHomePage.fxml"));
-         window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("clientHomePage.fxml"));
+          window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
      }
-     public void toCart(javafx.event.ActionEvent actionEvent) throws IOException {
+      public void toCart(javafx.event.ActionEvent actionEvent) throws IOException {
 
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
-         window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
+          window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
      }
     private boolean isSameCategory(String categoryName) {
         String selectedCategory = ClientHomePageController.getSelectedCategoryName();

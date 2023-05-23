@@ -30,59 +30,59 @@ public class ClientHomePageController {
     private static String selectedCategoryName;
 
     @FXML
-     public void handleLogOut(ActionEvent event) throws IOException {
+      public void handleLogOut(ActionEvent event) throws IOException {
 
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
      }
     @FXML
-     public void handlePastOrders(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPastOrders.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+      public void handlePastOrders(ActionEvent event) throws IOException {
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPastOrders.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
      }
     @FXML
-     public void handleCart(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+      public void handleCart(ActionEvent event) throws IOException {
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("cart.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
     }
 
     @FXML
-     public void handleDisneyPrincesses(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("DisneyPrincesses.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+      public void handleDisneyPrincesses(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("DisneyPrincesses.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
      }
-    @FXML
-     public void handleClassicDisneyCharacters(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ClassicDisneyCharacters.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+     @FXML
+      public void handleClassicDisneyCharacters(ActionEvent event) throws IOException {
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ClassicDisneyCharacters.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
     }
     @FXML
-      public void handleHobbitCharacters(ActionEvent event) throws IOException {
-         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("TheHobbitCharacters.fxml"));
-         window= (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         window.setScene(scene);
-         window.show();
+       public void handleHobbitCharacters(ActionEvent event) throws IOException {
+          Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("TheHobbitCharacters.fxml"));
+          window= (Stage)((Node)event.getSource()).getScene().getWindow();
+          scene = new Scene(root);
+          window.setScene(scene);
+          window.show();
     }
-    @FXML
-    public static String getSelectedCategoryName() {
-        return selectedCategoryName;
-    }
+     @FXML
+     public static String getSelectedCategoryName() {
+         return selectedCategoryName;
+     }
 
 
 }
