@@ -47,7 +47,6 @@ public class SuppliersController implements Initializable {
         col_name.setCellValueFactory(new PropertyValueFactory<ModelPH, String>("supplierName"));
         initializeSuppliers();
         table.setItems(SupplierService.getSuppliers());
-
     }
 
     public static void initializeSuppliers(){

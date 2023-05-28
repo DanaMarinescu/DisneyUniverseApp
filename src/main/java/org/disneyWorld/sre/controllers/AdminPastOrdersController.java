@@ -9,7 +9,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.disneyWorld.sre.model.Character;
 import org.disneyWorld.sre.model.Order;
 import org.disneyWorld.sre.services.OrderService;
 
@@ -21,11 +20,11 @@ public class AdminPastOrdersController implements Initializable {
     @FXML
     private TableView<Order> pastOrders;
     @FXML
-    private TableColumn<Character, String> characterName;
+    private TableColumn<Order, String> characterName;
     @FXML
-    private TableColumn<Character, String> ageCategory;
+    private TableColumn<Order, String> ageCategory;
     @FXML
-    private TableColumn<Character, Integer> price;
+    private TableColumn<Order, Integer> price;
     @FXML
     private TableColumn<Order, String> status;
     @FXML
