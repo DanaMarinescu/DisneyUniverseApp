@@ -13,8 +13,8 @@ import java.util.Objects;
 })
 public class Order {
     @Id
-    private String name;
-    private int age;
+    private String characterName;
+    private String ageCategoryName;
     private float price;
     private String status;
     private int stock;
@@ -22,9 +22,9 @@ public class Order {
 
     public Order(){}
 
-    public Order(String name, int age, float price, String status, int stock, String user) {
-        this.name = name;
-        this.age = age;
+    public Order(String characterName, String ageCategoryName, float price, String status, int stock, String user) {
+        this.characterName = characterName;
+        this.ageCategoryName = ageCategoryName;
         this.price = price;
         this.status = status;
         this.stock = stock;
@@ -32,20 +32,20 @@ public class Order {
     }
 
 
-    public String getName() {
-        return name;
+    public String getCharacterName() {
+        return characterName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
     }
 
-    public int getAge() {
-        return age;
+    public String getAgeCategoryName() {
+        return ageCategoryName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAgeCategoryName(String ageCategoryName) {
+        this.ageCategoryName = ageCategoryName;
     }
 
     public float getPrice() {
@@ -86,11 +86,11 @@ public class Order {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Order order = (Order) obj;
-        return age == order.age && Float.compare(order.price, price) == 0 && stock == order.stock && Objects.equals(name, order.name) && Objects.equals(status, order.status) && Objects.equals(user, order.user);
+        return Objects.equals(ageCategoryName, order.ageCategoryName) && Float.compare(order.price, price) == 0 && stock == order.stock && Objects.equals(characterName, order.characterName) && Objects.equals(status, order.status) && Objects.equals(user, order.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name,age, price, status, stock, user);
+        return Objects.hash(characterName,ageCategoryName, price, status, stock, user);
     }
 }

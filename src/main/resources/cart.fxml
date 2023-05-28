@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,11 +14,11 @@
 
 <AnchorPane prefHeight="492.0" prefWidth="600.0" style="-fx-background-color: lightblue; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.CartController">
     <children>
-        <TableView layoutX="31.0" layoutY="116.0" prefHeight="310.0" prefWidth="538.0" style="-fx-background-color: white; -fx-border-color: dark blue;">
+        <TableView fx:id="cartTable" layoutX="31.0" layoutY="116.0" prefHeight="310.0" prefWidth="538.0" style="-fx-background-color: white; -fx-border-color: dark blue;">
             <columns>
-                <TableColumn prefWidth="213.5999755859375" style="-fx-background-color: #00BFFF;" text="characterName" />
-                <TableColumn prefWidth="162.4000244140625" style="-fx-background-color: #00BFFF;" text="characterAge" />
-                <TableColumn prefWidth="167.20001220703125" style="-fx-background-color: #00BFFF;" text="price" />
+                <TableColumn fx:id="id_name" prefWidth="213.5999755859375" style="-fx-background-color: #00BFFF;" text="Character Name" />
+                <TableColumn fx:id="id_age" prefWidth="162.4000244140625" style="-fx-background-color: #00BFFF;" text="Age Category" />
+                <TableColumn fx:id="id_price" prefWidth="167.20001220703125" style="-fx-background-color: #00BFFF;" text="Price" />
             </columns>
             <effect>
                 <InnerShadow>
@@ -27,9 +28,9 @@
                 </InnerShadow>
             </effect>
         </TableView>
-        <Label layoutX="445.0" layoutY="32.0" prefHeight="58.0" prefWidth="125.0" text="Cart">
+        <Label layoutX="255.0" layoutY="31.0" prefHeight="58.0" prefWidth="125.0" text="Cart">
             <font>
-                <Font name="Bookman Old Style Bold Italic" size="30.0" />
+                <Font name="Bookman Old Style Bold Italic" size="36.0" />
             </font>
             <effect>
                 <InnerShadow>
@@ -52,9 +53,7 @@
             </effect>
         </Button>
         <ImageView fitHeight="100.0" fitWidth="86.0" layoutX="34.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../../Disney.jpeg" />
-            </image>
+
         </ImageView>
         <Button layoutX="26.0" layoutY="441.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="30.0" prefWidth="74.0" style="-fx-background-color: darkblue;" text="Back" textFill="#78d3ec">
             <font>
@@ -68,5 +67,6 @@
                 </InnerShadow>
             </effect>
         </Button>
+      <TextField fx:id="id_message" layoutX="217.0" layoutY="441.0" prefHeight="30.0" prefWidth="166.0" />
     </children>
 </AnchorPane>

@@ -4,36 +4,26 @@ import org.dizitart.no2.objects.Id;
 
 import java.util.Objects;
 
-public class DisneyCharacter {
+public class Character {
     @Id
     private String name;
-    private int age;
-    private String category;
+    private String ageCategory;
     private float price;
     private int stock;
 
-    public DisneyCharacter() {
+    public Character() {
     }
 
-    public DisneyCharacter(String name, int age, String category, float price, int stock){
+    public Character(String name, String ageCategory, float price, int stock){
         this.name = name;
-        this.age = age;
-        this.category = category;
+        this.ageCategory = ageCategory;
         this.price = price;
         this.stock = stock;
     }
 
     public String getName() { return name; }
 
-    public int getAge() {return age;}
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
+    public String getAgeCategory() {return ageCategory;}
 
     public float getPrice() { return price; }
 
@@ -43,8 +33,8 @@ public class DisneyCharacter {
         this.name = name;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAgeCategory(String ageCategory) {
+        this.ageCategory = ageCategory;
     }
 
     public void setPrice(float price) {
@@ -59,12 +49,12 @@ public class DisneyCharacter {
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if(obj == null || getClass() != obj.getClass()) return false;
-        DisneyCharacter disney = (DisneyCharacter) obj;
-        return age == disney.age && Float.compare(disney.price, price) == 0 && stock == disney.stock && Objects.equals(name, disney.name) && Objects.equals(category, disney.category);
+        Character disney = (Character) obj;
+        return Objects.equals(ageCategory, disney.ageCategory)&& Float.compare(disney.price, price) == 0 && stock == disney.stock && Objects.equals(name, disney.name);
     }
 
     public int hashCode() {
-        return Objects.hash(name, age, category, price, stock);
+        return Objects.hash(name, ageCategory, price, stock);
     }
 }
 

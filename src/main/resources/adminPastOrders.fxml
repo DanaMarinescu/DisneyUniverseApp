@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFF0F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.AdminPastOrdersController">
+    <children>
+        <Button layoutX="514.0" layoutY="343.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="20.0" prefWidth="72.0" style="-fx-background-color: #cc9898;" text="BACK" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <TableView fx:id="pastOrders" layoutX="14.0" layoutY="66.0" prefHeight="327.0" prefWidth="497.0" style="-fx-background-color: #FFF0F5;">
+            <columns>
+                <TableColumn fx:id="username" prefWidth="95.20001220703125" text="User" />
+                <TableColumn fx:id="characterName" prefWidth="115.20001220703125" text="Character Name" />
+                <TableColumn fx:id="ageCategory" prefWidth="99.20001220703125" text="Age Category" />
+                <TableColumn fx:id="price" prefWidth="76.79998779296875" text="Price" />
+                <TableColumn fx:id="status" prefWidth="106.39996337890625" text="Status" />
+            </columns>
+        </TableView>
+      <Text fill="#cc9898" layoutX="114.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin past orders">
+         <font>
+            <Font name="Engravers MT" size="24.0" />
+         </font>
+      </Text>
+    </children>
+</Pane>

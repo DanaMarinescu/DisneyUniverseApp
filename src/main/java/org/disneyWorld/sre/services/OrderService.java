@@ -2,27 +2,25 @@ package org.disneyWorld.sre.services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.dizitart.no2.IndexType;
 import org.dizitart.no2.Nitrite;
-import org.dizitart.no2.objects.Index;
-import org.dizitart.no2.objects.Indices;
-import org.dizitart.no2.objects.ObjectFilter;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.dizitart.no2.objects.filters.ObjectFilters;
-import org.disneyWorld.sre.model.DisneyCharacter;
+import org.disneyWorld.sre.model.Character;
 import org.disneyWorld.sre.model.Order;
 
 import static org.disneyWorld.sre.services.FileSystemService.getPathToFile;
+
 public class OrderService {
     private static ObjectRepository<Order>orderRepository;
 
-    public static void initDatabase(String publishingHouse) {
+    public static void initDatabase(String supplier) {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile(publishingHouse+"orders.db").toFile())
+                .filePath(getPathToFile(supplier+"-orders.db").toFile())
                 .openOrCreate("test", "test");
 
         orderRepository = database.getRepository(Order.class);
     }
+
     public static void close(){
         orderRepository.close();
     }
@@ -32,19 +30,14 @@ public class OrderService {
             return orderRepository.isClosed();
         else return true;
     }
-    public static void addOrder(String username,DisneyCharacter characterOrdered, String status) {
+    public static void addOrder(String username, Character characterOrdered, String status) {
         characterOrdered.setStock(characterOrdered.getStock()-1);
-        orderRepository.insert(new Order(characterOrdered.getName(),characterOrdered.getAge(),characterOrdered.getPrice(),status,characterOrdered.getStock(),username));
+        orderRepository.insert(new Order(characterOrdered.getName(),characterOrdered.getAgeCategory(),characterOrdered.getPrice(),status,characterOrdered.getStock(),username));
     }
 
     public static void editStatus(Order order, String status){
         orderRepository.remove(order);
-        orderRepository.insert(new Order(order.getName(),order.getAge(),order.getPrice(),status, order.getStock(),order.getUser()));
-    }
-
-    public static void editPrice(Order order, float price){
-        orderRepository.remove(order);
-        orderRepository.insert(new Order(order.getName(),order.getAge(),price,order.getStatus(),order.getStock(),order.getUser()));
+        orderRepository.insert(new Order(order.getCharacterName(),order.getAgeCategoryName(),order.getPrice(),status, order.getStock(),order.getUser()));
     }
 
     public static void clearDatabase(){
@@ -65,7 +58,7 @@ public class OrderService {
         ObservableList ordersList= FXCollections.observableArrayList();
         ordersList.removeAll();
         for (Order order:orderRepository.find()){
-            if(order.getStatus().equals("Delivered"))
+            if(order.getStatus().equals("Delivered") || order.getStatus().equals("Rejected"))
                 ordersList.add(order);
         }
         return ordersList;

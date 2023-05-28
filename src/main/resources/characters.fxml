@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.CharactersController">
+   <children>
+      <TableView fx:id="charactersTable" layoutX="128.0" layoutY="73.0" prefHeight="328.0" prefWidth="344.0" style="-fx-background-color: #E0FFFF;">
+        <columns>
+          <TableColumn fx:id="id_name" prefWidth="155.20001220703125" text="Name" />
+          <TableColumn fx:id="id_age" prefWidth="112.0" text="Age Category" />
+            <TableColumn fx:id="id_price" prefWidth="72.800048828125" text="Price" />
+        </columns>
+      </TableView>
+      <Text layoutX="111.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your favorite character " wrappingWidth="377.70703125">
+         <font>
+            <Font name="Snap ITC" size="20.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37910330295562744" green="0.5137777924537659" blue="0.7157894968986511" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" green="0.13208577036857605" blue="0.13208577036857605" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text layoutX="182.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="for a perfect party!">
+         <font>
+            <Font name="Snap ITC" size="20.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37910330295562744" green="0.5137777924537659" blue="0.7157894968986511" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" green="0.13208577036857605" blue="0.13208577036857605" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button fx:id="id_cart" layoutX="480.0" layoutY="73.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="34.0" prefWidth="110.0" style="-fx-background-radius: 10;" text="Add To Cart">
+         <font>
+            <Font name="Serif Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37910330295562744" green="0.5137777924537659" blue="0.7157894968986511" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" green="0.13208577036857605" blue="0.13208577036857605" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button layoutX="490.0" layoutY="345.0" mnemonicParsing="false" onAction="#toSuppliers" prefHeight="34.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="Back">
+         <font>
+            <Font name="Serif Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.37910330295562744" green="0.5137777924537659" blue="0.7157894968986511" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8105263113975525" green="0.13208577036857605" blue="0.13208577036857605" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Circle fill="#9eb3c7" layoutX="-8.0" layoutY="34.0" radius="100.0" stroke="#9eb3c7" strokeType="INSIDE" />
+      <Circle fill="#cee6fc" layoutX="-25.0" layoutY="160.0" radius="100.0" stroke="#cee6fc" strokeType="INSIDE" />
+      <Circle fill="#79a2c9" layoutX="52.0" layoutY="276.0" radius="52.0" stroke="#79a2c9" strokeType="INSIDE" />
+      <Circle fill="#074a89" layoutX="69.0" layoutY="107.0" radius="17.0" stroke="#074a89" strokeType="INSIDE" />
+      <Circle fill="#bbd0e4" layoutX="22.0" layoutY="340.0" radius="39.0" stroke="#bbd0e4" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

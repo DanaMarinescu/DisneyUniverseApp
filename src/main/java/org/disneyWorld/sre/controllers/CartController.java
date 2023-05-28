@@ -1,6 +1,5 @@
 package org.disneyWorld.sre.controllers;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,9 +11,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.disneyWorld.sre.model.DisneyCharacter;
-import org.disneyWorld.sre.model.Order;
 import org.disneyWorld.sre.services.OrderService;
+import org.disneyWorld.sre.model.Character;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,22 +22,18 @@ public class CartController implements Initializable {
     private Stage window;
     private Scene scene;
     private Parent root;
-    private static DisneyCharacter select;
+    private static Character selected;
 
     @FXML
-    private TableView<DisneyCharacter> table;
-
+    private TableView<Character> cartTable;
     @FXML
-    private TableColumn<DisneyCharacter,String> id_name;
-
+    private TableColumn<Character,String> id_name;
     @FXML
-    private TableColumn<DisneyCharacter,Float> id_age;
-
+    private TableColumn<Character,Float> id_price;
     @FXML
-    private TableColumn<DisneyCharacter, String> id_price;
-
+    private TableColumn<Character, String> id_age;
     @FXML
-    private TextField id_ms;
+    private TextField id_message;
 
     @FXML
     void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -52,22 +46,17 @@ public class CartController implements Initializable {
 
     @FXML
     void toOrder(){
-        select = table.getSelectionModel().getSelectedItem();
-        OrderService.addOrder(LoginController.currentUser.getUsername(),select,"Placed");
-        id_ms.setText("PLACED!");
-    }
-
-    public static DisneyCharacter getSelect(){
-        return select;
+        selected=cartTable.getSelectionModel().getSelectedItem();
+        OrderService.addOrder(LoginController.currentUser.getUsername(),selected,"Placed");
+        id_message.setText("PLACED!");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         id_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        id_age.setCellValueFactory(new PropertyValueFactory<>("age"));
+        id_age.setCellValueFactory(new PropertyValueFactory<>("ageCategory"));
         id_price.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        table.getItems().add(DisneyCharactersController.getSelect());
+        cartTable.getItems().add(CharactersController.getSelect());
     }
 }
-

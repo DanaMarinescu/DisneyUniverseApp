@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.disneyWorld.sre.exceptions.UsernameAlreadyExistsException;
+import org.disneyWorld.sre.services.SupplierService;
 import org.disneyWorld.sre.services.UserService;
 
 import java.io.IOException;
@@ -39,6 +40,7 @@ public class RegistrationController {
     public void handleRegisterAction(javafx.event.ActionEvent actionEvent) throws IOException {
         try {
             UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
+            SupplierService.addUser(usernameField.getText(),(String) role.getValue());
             registrationMessage.setText("Account created successfully!");
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
             window= (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
@@ -48,5 +50,12 @@ public class RegistrationController {
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
         }
+    }
+    public void toLogin(javafx.event.ActionEvent actionEvent) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        window.setScene(scene);
+        window.show();
     }
 }

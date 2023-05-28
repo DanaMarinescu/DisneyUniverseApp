@@ -9,7 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.disneyWorld.sre.model.DisneyCharacter;
+import org.disneyWorld.sre.model.Character;
 import org.disneyWorld.sre.model.Order;
 import org.disneyWorld.sre.services.OrderService;
 
@@ -17,28 +17,27 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PastOrdersController implements Initializable {
+public class AdminPastOrdersController implements Initializable {
     @FXML
     private TableView<Order> pastOrders;
-
     @FXML
-    private TableColumn<DisneyCharacter, String> characterName;
-
+    private TableColumn<Character, String> characterName;
     @FXML
-    private TableColumn<DisneyCharacter, String> characterAge;
-
+    private TableColumn<Character, String> ageCategory;
     @FXML
-    private TableColumn<DisneyCharacter, String> price;
-
+    private TableColumn<Character, Integer> price;
     @FXML
     private TableColumn<Order, String> status;
+    @FXML
+    private TableColumn<Order,String>username;
 
     private Scene scene;
     private Stage window;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        characterName.setCellValueFactory(new PropertyValueFactory<>("character name"));
-        characterAge.setCellValueFactory(new PropertyValueFactory<>("character age"));
+        username.setCellValueFactory(new PropertyValueFactory<>("user"));
+        characterName.setCellValueFactory(new PropertyValueFactory<>("characterName"));
+        ageCategory.setCellValueFactory(new PropertyValueFactory<>("ageCategoryName"));
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
 
@@ -46,7 +45,7 @@ public class PastOrdersController implements Initializable {
     }
 
 
-    public void goBack(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void toHomePage(javafx.event.ActionEvent actionEvent) throws IOException {
         scene=new Scene(FXMLLoader.load(getClass().getClassLoader().getResource("adminHomePage.fxml")));
         window=(Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         window.setScene(scene);

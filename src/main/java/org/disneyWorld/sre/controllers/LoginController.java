@@ -9,10 +9,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.disneyWorld.sre.exceptions.UserDoesNotExistException;
-//import org.disneyWorld.sre.model.Book;
+import org.disneyWorld.sre.model.Character;
 import org.disneyWorld.sre.model.User;
-//import org.disneyWorld.sre.services.BookService;
-//import org.disneyWorld.sre.services.OrderService;
+import org.disneyWorld.sre.services.CharacterService;
+import org.disneyWorld.sre.services.OrderService;
 import org.disneyWorld.sre.services.UserService;
 import java.io.IOException;
 
@@ -28,6 +28,7 @@ public class LoginController {
     private TextField usernameField;
 
     public static User currentUser;
+
     public void handleLogInAction(javafx.event.ActionEvent actionEvent) throws IOException {
         try {
             if(UserService.checkUser(usernameField.getText(), passwordField.getText()).equals("Client")){
@@ -44,6 +45,8 @@ public class LoginController {
                 scene=new Scene(root);
                 window.setScene(scene);
                 window.show();
+                CharacterService.initDatabase(usernameField.getText());
+                OrderService.initDatabase(usernameField.getText());
             }
 
         } catch (UserDoesNotExistException e) {

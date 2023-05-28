@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D8BFD8; -fx-border-color: purple;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.ClientPastOrdersController">
+    <effect>
+        <ColorAdjust />
+    </effect>
+    <TableView fx:id="pastOrdersTable" layoutX="14.0" layoutY="60.0" prefHeight="339.0" prefWidth="297.0">
+        <columns>
+            <TableColumn fx:id="id_order" minWidth="0.0" prefWidth="153.60003662109375" style="-fx-background-color: lightpink;" text="Order" />
+            <TableColumn fx:id="id_status" prefWidth="143.199951171875" style="-fx-background-color: lightpink;" text="Status" />
+        </columns>
+        <effect>
+            <InnerShadow>
+                <color>
+                    <Color red="0.5052631497383118" green="0.035555556416511536" blue="0.43480703234672546" />
+                </color>
+            </InnerShadow>
+        </effect>
+    </TableView>
+    <Button layoutX="430.0" layoutY="351.0" mnemonicParsing="false" onAction="#goToHomePage" prefHeight="36.0" prefWidth="64.0" style="-fx-background-color: purple;" text="Back" textFill="#bf6baf">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="15.0" />
+        </font>
+    </Button>
+    <Label layoutX="145.0" layoutY="14.0" prefHeight="46.0" prefWidth="333.0" text="Past Orders" textFill="#df0fb5">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="30.0" />
+        </font>
+        <effect>
+            <Lighting>
+                <bumpInput>
+                    <Shadow />
+                </bumpInput>
+            </Lighting>
+        </effect>
+    </Label>
+   <Button layoutX="390.0" layoutY="60.0" mnemonicParsing="false" onAction="#seeDetails" prefHeight="36.0" prefWidth="143.0" text="Order Details" textFill="#bf6baf">
+      <font>
+         <Font name="Bookman Old Style Bold Italic" size="14.0" />
+      </font>
+   </Button>
+   <TextField fx:id="id_name" layoutX="381.0" layoutY="113.0" text="See Name">
+      <font>
+         <Font name="Perpetua Titling MT Light" size="12.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="id_s" layoutX="381.0" layoutY="189.0" text="See Status">
+      <font>
+         <Font name="Perpetua Titling MT Light" size="12.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="id_price" layoutX="381.0" layoutY="152.0" text="See price">
+      <font>
+         <Font name="Perpetua Titling MT Light" size="12.0" />
+      </font>
+   </TextField>
+</AnchorPane>

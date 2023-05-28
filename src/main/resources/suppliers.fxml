@@ -7,45 +7,16 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.DisneyCharactersController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.disneyWorld.sre.controllers.SuppliersController">
     <children>
-        <AnchorPane prefHeight="440.0" prefWidth="641.0" style="-fx-background-color: #a7dbd8;">
+        <AnchorPane prefHeight="410.0" prefWidth="610.0" style="-fx-background-color: #ffdaab;">
             <children>
-                <Button fx:id="cartButton" layoutX="87.0" layoutY="230.0" mnemonicParsing="false" onAction="#toCart" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Cart">
-                    <font>
-                        <Font name="Segoe UI Light" size="16.0" />
-                    </font>
-                    <textFill>
-                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
-                            <stops>
-                                <Stop>
-                                    <color>
-                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
-                                    </color>
-                                </Stop>
-                                <Stop offset="0.4104979811574696">
-                                    <color>
-                                        <Color red="0.11622807383537292" green="0.2368421107530594" blue="0.13432016968727112" />
-                                    </color>
-                                </Stop>
-                                <Stop offset="1.0">
-                                    <color>
-                                        <Color red="0.15294118225574493" green="0.29019609093666077" blue="0.6941176652908325" />
-                                    </color>
-                                </Stop>
-                            </stops>
-                        </LinearGradient>
-                    </textFill>
-                </Button>
-                <Text fill="#0d5363" layoutX="50.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories of Disney Characters" textAlignment="CENTER" wrappingWidth="174.39999999999986">
-                    <font>
-                        <Font name="Gabriola" size="28.0" />
-                    </font>
-                </Text>
-                <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Back">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ef97b7" height="443.0" layoutX="469.0" layoutY="-18.0" stroke="#ef97b7" strokeType="INSIDE" width="183.0" />
+                <Button layoutX="509.0" layoutY="357.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Back">
                     <font>
                         <Font name="Segoe UI Light" size="16.0" />
                     </font>
@@ -71,37 +42,68 @@
                         </LinearGradient>
                     </textFill>
                 </Button>
-                <Text layoutX="40.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a Classic Disney Characters" textAlignment="CENTER" wrappingWidth="194.39999999999986">
-                    <font>
-                        <Font name="Gabriola" size="22.0" />
-                    </font>
-                    <fill>
-                        <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+                <TableView fx:id="table" layoutX="103.0" layoutY="71.0" prefHeight="314.0" prefWidth="320.0" style="-fx-background-color: #FFE4C4;">
+                    <columns>
+                        <TableColumn fx:id="col_name" prefWidth="319.2000045776367" text="Themed Party Suppliers" />
+                    </columns>
+                </TableView>
+                <Button fx:id="id_characters" layoutX="509.0" layoutY="175.0" mnemonicParsing="false" onAction="#toDisneyCharacters" prefHeight="37.0" prefWidth="102.0" style="-fx-background-radius: 15;" text="Characters">
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
                             <stops>
                                 <Stop>
                                     <color>
-                                        <Color red="0.9078947305679321" green="0.4329312741756439" blue="0.8683144450187683" />
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
                                     </color>
                                 </Stop>
-                                <Stop offset="0.006711409395973154">
+                                <Stop offset="0.4104979811574696">
                                     <color>
-                                        <Color red="0.13884015381336212" green="0.4868420958518982" blue="0.051839668303728104" />
+                                        <Color red="0.2923976480960846" green="0.6315789222717285" blue="0.343274861574173" />
                                     </color>
                                 </Stop>
                                 <Stop offset="1.0">
                                     <color>
-                                        <Color red="0.05130000039935112" green="0.27000001072883606" blue="0.09712285548448563" />
+                                        <Color />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <font>
+                        <Font name="Segoe UI Semilight" size="16.0" />
+                    </font>
+                </Button>
+                <Text layoutX="476.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELECT A CATEGORY, THEN">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="14.0" />
+                    </font>
+                    <fill>
+                        <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.42105263471603394" green="0.17912930250167847" blue="0.14191032946109772" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.4104979811574696">
+                                    <color>
+                                        <Color red="0.2923976480960846" green="0.6315789222717285" blue="0.343274861574173" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color />
                                     </color>
                                 </Stop>
                             </stops>
                         </LinearGradient>
                     </fill>
                 </Text>
-                <Button fx:id="addButton" layoutX="87.0" layoutY="173.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="36.0" prefWidth="101.0" style="-fx-background-radius: 15;" text="Add">
+                <Text layoutX="504.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLICK &quot;Characters&quot;">
                     <font>
-                        <Font name="Segoe UI Light" size="16.0" />
+                        <Font name="Segoe UI Semilight" size="14.0" />
                     </font>
-                    <textFill>
+                    <fill>
                         <LinearGradient endX="1.0" endY="0.3333333188837224" startX="0.32196971051620715" startY="0.5568181745933765">
                             <stops>
                                 <Stop>
@@ -121,14 +123,13 @@
                                 </Stop>
                             </stops>
                         </LinearGradient>
-                    </textFill>
-                </Button>
-                <TableView layoutX="258.0" layoutY="-1.0" prefHeight="440.0" prefWidth="383.0" style="-fx-background-color: #e0e4cc;">
-                    <columns>
-                        <TableColumn prefWidth="249.0" style="-fx-background-color: #b9d7d9;" text="Classic Disney Characters" />
-                        <TableColumn prefWidth="133.0" style="-fx-background-color: #b9d7d9;" text="Price" />
-                    </columns>
-                </TableView>
+                    </fill>
+                </Text>
+                <Text fill="#0d5363" layoutX="46.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The party of the Disney Universe begins with them!" wrappingWidth="605.4001220703124">
+                    <font>
+                        <Font name="Gabriola" size="36.0" />
+                    </font>
+                </Text>
             </children>
         </AnchorPane>
     </children>
